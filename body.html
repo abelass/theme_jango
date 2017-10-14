@@ -1,27 +1,47 @@
-<body>
-	<div class="page">
-		<div class="container">
-			<div class="header" id="header">
-				<INCLURE{fond=header/#ENV{type-page},env} />
-			</div>
-			[<div class="navbar navbar-inverse navbar-responsive" id="nav">
-				(#INCLURE{fond=inclure/nav,env}|navbar_responsive)
-			</div>]
+<body class="c-layout-header-fixed c-layout-header-mobile-fixed c-layout-header-topbar c-layout-header-topbar-collapse">
+	<!-- BEGIN: LAYOUT/HEADERS/HEADER-1 -->
+	<!-- BEGIN: HEADER -->
+	<header class="c-layout-header c-layout-header-4 c-layout-header-default-mobile" data-minimize-offset="80">
+		[<div class="c-topbar c-topbar-light c-solid-bg">
+			(#INCLURE{fond=inclure/topbar_light})
+		</div>]
+		[<div class="c-navbar">
+			(#INCLURE{fond=inclure/nav,env})
+		</div>]
+	</header>
 
-			<div class="row">
-				<div class="content col-sm-9" id="content">
-					<INCLURE{fond=breadcrumb/#ENV{type-page},env} />
-					<INCLURE{fond=content/#ENV{type-page},env} />
+	<div class="c-layout-page">
+	<!-- BEGIN: LAYOUT/BREADCRUMBS/BREADCRUMBS-2 -->
+		<div class="c-layout-breadcrumbs-1 c-subtitle c-fonts-uppercase c-fonts-bold c-bordered c-bordered-both">
+			<div class="container">
+				<div class="c-page-title c-pull-left">
+					<h3 class="c-font-uppercase c-font-sbold">Sidebar Menu v1</h3>
+					<h4 class="">Page Sub Title Goes Here</h4>
 				</div>
-				<div class="aside secondary col-sm-3 offset1" id="aside">
-					<INCLURE{fond=aside/#ENV{type-page},env} />
-					<INCLURE{fond=extra/#ENV{type-page},env} />
-				</div>
-			</div>
-
-			<div class="footer" id="footer">
-				<INCLURE{fond=footer/#ENV{type-page},env} />
+				<INCLURE{fond=breadcrumb/#ENV{type-page},env} />
 			</div>
 		</div>
+			<div class="container">
+				<div class="header" id="header">
+					<INCLURE{fond=header/#ENV{type-page},env} />
+				</div>
+
+
+				<div class="row">
+					<div class="content col-sm-9" id="content">
+
+						<INCLURE{fond=content/#ENV{type-page},env} />
+					</div>
+					<div class="aside secondary col-sm-3 offset1" id="aside">
+						<INCLURE{fond=aside/#ENV{type-page},env} />
+						<INCLURE{fond=extra/#ENV{type-page},env} />
+					</div>
+				</div>
+
+				<div class="footer" id="footer">
+					<INCLURE{fond=footer/#ENV{type-page},env} />
+				</div>
+			</div>
+
 	</div>
 </body>
