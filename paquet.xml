@@ -1,5 +1,5 @@
 <paquet
-	prefix="theme_jango"
+	prefix="bootstrap3_dist"
 	categorie="squelette"
 	version="1.0.0"
 	etat="dev"
@@ -8,7 +8,7 @@
 	documentation="http://spipr.nursit.com/"
 >
 
-	<nom>SPIPr-dist</nom>
+	<nom>Bootstrap 3 dist</nom>
 
 	<auteur>Collectif SPIP</auteur>
 
