@@ -10,9 +10,9 @@
 
 	<nom>Theme Jango</nom>
 
-	<auteur>Collectif SPIP</auteur>
+	<auteur>Rainer Müller</auteur>
+	<auteur lien='https://websimple.be'>Web Simple</auteur>
 
 	<necessite nom="bootstrap3_dist" compatibilite="[1.0.0;[" />
 
-	<utilise nom="albums" compatibilite="[1.0.0;[" />
 </paquet>
