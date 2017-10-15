@@ -14,5 +14,15 @@ body {
 /* conflict with icons */
 [class^="icon-"],
 [class*=" icon-"] {
-	display: inherit;
+	display: initial;
+	width: auto;
+	height: auto;
+	line-height: 1;
+	vertical-align: initial;
+	background-image: none;
+	margin-top: 0;
+}
+
+.navbar-nav > li > a {
+	line-height: 20px;
 }
