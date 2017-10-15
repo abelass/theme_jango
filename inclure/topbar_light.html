@@ -19,15 +19,10 @@
 			<li><a href="#">FAQ</a></li>
 		</ul>
 		<ul class="c-ext c-theme-ul">
-			<li class="c-lang dropdown c-last">
-				<a href="#">en</a>
-				<ul class="dropdown-menu pull-right" role="menu">
-					<li class="active"><a href="#">English</a></li>
-					<li><a href="#">German</a></li>
-					<li><a href="#">Espaniol</a></li>
-					<li><a href="#">Portugise</a></li>
-				</ul>
-			</li>
+			[<li class="c-lang dropdown c-last">
+				<a href="#">[(#ENV{lang})]</a>
+				(#INCLURE{fond=inclure/menu_lang,env})
+			</li>]
 			<li class="c-search hide">
 				<!-- BEGIN: QUICK SEARCH -->
 				<form action="#">

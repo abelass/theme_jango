@@ -21,27 +21,47 @@
 				<INCLURE{fond=breadcrumb/#ENV{type-page},env} />
 			</div>
 		</div>
-			<div class="container">
-				<div class="header" id="header">
-					<INCLURE{fond=header/#ENV{type-page},env} />
+		<div class="container">
+			<div class="header" id="header">
+				<INCLURE{fond=header/#ENV{type-page},env} />
+			</div>
+
+
+			<div class="row">
+				<div class="content col-sm-9" id="content">
+
+					<INCLURE{fond=content/#ENV{type-page},env} />
 				</div>
-
-
-				<div class="row">
-					<div class="content col-sm-9" id="content">
-
-						<INCLURE{fond=content/#ENV{type-page},env} />
-					</div>
-					<div class="aside secondary col-sm-3 offset1" id="aside">
-						<INCLURE{fond=aside/#ENV{type-page},env} />
-						<INCLURE{fond=extra/#ENV{type-page},env} />
-					</div>
-				</div>
-
-				<div class="footer" id="footer">
-					<INCLURE{fond=footer/#ENV{type-page},env} />
+				<div class="aside secondary col-sm-3 offset1" id="aside">
+					<INCLURE{fond=aside/#ENV{type-page},env} />
+					<INCLURE{fond=extra/#ENV{type-page},env} />
 				</div>
 			</div>
 
+			<div class="footer" id="footer">
+				<INCLURE{fond=footer/#ENV{type-page},env} />
+			</div>
+		</div>
 	</div>
+
+	[(#REM)<!-- BEGIN: CART MENU -->
+		<INCLURE{fond=inclure/panier,env} />
+	<!-- END: CART MENU -->]
+
+	<INCLURE{fond=inclure/quick_sidebar} />
+	<!-- END: LAYOUT/SIDEBARS/QUICK-SIDEBAR -->
+
+		<!-- Modal -->
+	<div class="modal" id="myModal" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content c-square">
+				<div class="modal-header c-no-border">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<INCLURE{fond=inclure/scripts} />
+
 </body>

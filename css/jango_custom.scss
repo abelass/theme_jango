@@ -1,0 +1,18 @@
+body {
+	line-height: normal;
+}
+
+/* Admin block, avoids conflict with topbar */
+.spip-admin-bloc,
+.spip-admin-float {
+	right: 0!important;
+	top: 10%!important;
+	transform-origin:100% 100%;
+	transform: rotate(-90deg);
+}
+
+/* conflict with icons */
+[class^="icon-"],
+[class*=" icon-"] {
+	display: inherit;
+}
