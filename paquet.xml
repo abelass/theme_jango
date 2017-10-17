@@ -17,4 +17,5 @@
 	<necessite nom="wsps_html5" compatibilite="[2.0.0;]" />
 	<necessite nom="owlcarousel" compatibilite="[1.0.3;]" />
 
+	<utilise nom="wsp_ml" compatibilite="[0.2.6;]" />
 </paquet>
