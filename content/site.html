@@ -1,9 +1,9 @@
 <BOUCLE_content(SITES){id_syndic}>
 <section>
-
+	[(#ENV{titre_breadcrumb}|non)
 	<header class="cartouche">
 		<h1 class="#EDIT{nom_site}">[<a href="#URL_SITE">(#LOGO_SITE|image_reduire)</a>]#NOM_SITE</h1>
-	</header>
+	</header>]
 	[(#REM) Boite à outils]
 	[(#INCLURE{fond=inclure/outils,env,titre,introduction=[(#INTRODUCTION|textebrut)],url=#URL_SITE})]
 	<div class="main">

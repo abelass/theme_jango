@@ -1,6 +1,8 @@
 <section>
 	<div class="main">
+		[(#ENV{titre_breadcrumb}|non)]
 		<h1 class="h1 spip">#NOM_SITE_SPIP</h1>
+		]
 		<div class="pass">
 			[(#ENV{p}|non) #FORMULAIRE_OUBLI ]
 			[(#ENV{p}|oui) #FORMULAIRE_MOT_DE_PASSE ]
