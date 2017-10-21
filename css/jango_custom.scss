@@ -26,3 +26,18 @@ body {
 .navbar-nav > li > a {
 	line-height: 20px;
 }
+
+ul:not(.spip), ol:not(.spip) {
+	margin-left: 0;
+}
+
+.c-layout-footer a {
+	color: #5c6873;
+}
+
+
+@media (min-width: 1200px) {
+	ul:not(.spip), ol:not(.spip) {
+		margin-left: 0;
+	}
+}

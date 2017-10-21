@@ -1,0 +1,7 @@
+[(#REM) Menu de navigation par rubriques ]
+[(#ENV{multilingue}|?{
+	#SET{ml,_ml}
+	,
+	#SET{ml,''}
+})]
+<INCLURE{fond=inclure/navsub#GET{ml},id_rubrique}>
