@@ -1,10 +1,10 @@
-[(#REM) Fil d'Ariane ]
 <section>
+	[(#ENV{titre_breadcrumb}|non)
 	<header class="cartouche">
 		<h1 class="h1">
 			<:plan_site:>
 		</h1>
-	</header>
+	</header>]
 	<div class="main">
 		<BOUCLE_secteurs (RUBRIQUES) {racine} {par titre}{tout}>
 
@@ -35,3 +35,4 @@
 		</ul>
 		</B_rubriques> </BOUCLE_secteurs>
 	</div>
+</section>
