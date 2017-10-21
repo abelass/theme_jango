@@ -1,8 +1,13 @@
 <BOUCLE_content(MOTS) {id_mot} {doublons}>
-<ul class="c-page-breadcrumbs c-theme-nav c-pull-right c-fonts-regular">
-	<li><a href="#URL_SITE_SPIP/"><:accueil_site:></a><span class="divider"> &gt; </span></li>
-	<li><span><:mots_clefs:></span><span class="divider"> &gt; </span></li>
-	<BOUCLE_ariane(GROUPES_MOTS){id_groupe}><li><span>[(#TITRE|couper{80})]</span><span class="divider"> &gt; </span></li></BOUCLE_ariane>
-	<li class="active"><span>[(#TITRE|couper{80})]</span></li>
+<ul class="#ENV{class,c-page-breadcrumbs c-theme-nav c-pull-right c-fonts-regular}rumbs c-theme-nav c-pull-right c-fonts-regular">
+	<li><a href="#URL_SITE_SPIP/"><:accueil_site:></a></li>
+	<li>/</li>
+	<li><span><:mots_clefs:></span></li>
+	<li>/</li>
+	<BOUCLE_ariane(GROUPES_MOTS){id_groupe}>
+		<li><span>[(#TITRE|couper{80})]</span></li>
+		<li>/</li>
+	</BOUCLE_ariane>
+	<li class="c-state_active"><span>[(#TITRE|couper{80})]</span></li>
 </ul>
 </BOUCLE_content>

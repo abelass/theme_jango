@@ -1,8 +1,11 @@
 <BOUCLE_content(AUTEURS){id_auteur}>
 [(#REM) Fil d'Ariane ]
-<ul class="c-page-breadcrumbs c-theme-nav c-pull-right c-fonts-regular">
-	<li><a href="#URL_SITE_SPIP/"><:accueil_site:></a><span class="divider"> &gt; </span></li>
-	<li><span><:info_auteurs:></span><span class="divider"> &gt; </span></li>
-	[<li class="active"><span>(#NOM|couper{80})</span></li>]
+<ul class="#ENV{class,c-page-breadcrumbs c-theme-nav c-pull-right c-fonts-regular}">
+	<li><a href="#URL_SITE_SPIP/"><:accueil_site:></a></li>
+	<li>/</li>
+	<li><span><:info_auteurs:></span></li>
+	<li>/</li>
+	[<li class="c-state_active"></li>
+	<li>/</li>]
 </ul>
 </BOUCLE_content>
