@@ -1,37 +1,12 @@
 <div class="container">
-	<!-- BEGIN: INLINE NAV -->
-	<nav class="c-top-menu c-pull-left">
-		<ul class="c-icons c-theme-ul">
-			<li><a href="#"><i class="icon-social-twitter"></i></a></li>
-			<li><a href="#"><i class="icon-social-facebook"></i></a></li>
-			<li><a href="#"><i class="icon-social-dribbble"></i></a></li>
-			<li class="hide"><span>Phone: +99890345677</span></li>
-		</ul>
-	</nav>
-	<!-- END: INLINE NAV -->
-	<!-- BEGIN: INLINE NAV -->
-	<nav class="c-top-menu c-pull-right">
-		<ul class="c-links c-theme-ul">
-			<li><a href="#">Help</a></li>
-			<li class="c-divider">|</li>
-			<li><a href="#">Contact</a></li>
-			<li class="c-divider">|</li>
-			<li><a href="#">FAQ</a></li>
-		</ul>
-		<ul class="c-ext c-theme-ul">
-			[<li class="c-lang dropdown c-last">
-				<a href="#">[(#ENV{lang})]</a>
-				(#INCLURE{fond=inclure/menu_lang,env})
-			</li>]
-			<li class="c-search hide">
-				<!-- BEGIN: QUICK SEARCH -->
-				<form action="#">
-					<input type="text" name="query" placeholder="search..." value="" class="form-control" autocomplete="off">
-					<i class="fa fa-search"></i>
-				</form>
-				<!-- END: QUICK SEARCH -->
-			</li>
-		</ul>
-	</nav>
-	<!-- END: INLINE NAV -->
+	[(#ENV{brand_topbar}|non)
+	<INCLURE{fond=inclure/inline_nav,env} />
+	]
+	[(#ENV{brand_topbar}|oui)
+	<INCLURE{fond=inclure/inline_nav,env} />
+	<div class="c-brand">
+		<INCLURE{fond=inclure/brand} />
+		<INCLURE{fond=inclure/social_icons} />
+	</div>
+	]
 </div>

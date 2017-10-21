@@ -1,14 +1,13 @@
-#SET{titre_breadcrumb,#ENV{titre_breadcrumb},oui}#SET{multilingue,#ENV{miltilinguue,''}
-[(#PLUGIN{wsp_ml}|oui)#SET{multilingue,oui}]
-<body class="c-layout-header-fixed c-layout-header-mobile-fixed c-layout-header-topbar c-layout-header-topbar-collapse">
+#SET{titre_breadcrumb,#ENV{titre_breadcrumb,oui}}#SET{brand_topbar,#ENV{brand_topbar,oui}}#SET{multilingue,#ENV{multilingue,''}[(#PLUGIN{wsp_ml}|oui)#SET{multilingue,oui}]
+<body class="[(#GET{brand_topbar}|?{c-layout-header-fixed c-layout-header-6-topbar,c-layout-header-fixed c-layout-header-mobile-fixed c-layout-header-topbar c-layout-header-topbar-collapse})]">
 	<!-- BEGIN: LAYOUT/HEADERS/HEADER-1 -->
 	<!-- BEGIN: HEADER -->
-	<header class="c-layout-header c-layout-header-4 c-layout-header-default-mobile" data-minimize-offset="80">
-		[<div class="c-topbar c-topbar-light c-solid-bg">
-			(#INCLURE{fond=inclure/topbar_light})
+	<header class="[(#GET{brand_topbar}|?{c-layout-header c-layout-header-6 c-navbar-fluid,c-layout-header c-layout-header-4 c-layout-header-default-mobile})]" data-minimize-offset="80">
+		[<div class="c-topbar[ c-topbar-light c-solid-bg(#GET{brand_topbar}|non)]">
+			(#INCLURE{fond=inclure/topbar_light,brand_topbar=#GET{brand_topbar}})
 		</div>]
 		[<div class="c-navbar">
-			(#INCLURE{fond=inclure/nav,env})
+			(#INCLURE{fond=inclure/nav,brand_topbar=#GET{brand_topbar},env})
 		</div>]
 	</header>
 
