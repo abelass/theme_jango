@@ -26,7 +26,6 @@
 		<div class="container">
 			<div class="c-layout-sidebar-menu c-theme ">
 				<INCLURE{fond=aside/#ENV{type-page},multilingue=#GET{multilingue},env} />
-				<INCLURE{fond=extra/#ENV{type-page},env} />
 			</div>
 			<div class="c-layout-sidebar-content ">
 				<INCLURE{fond=content/#ENV{type-page},titre_breadcrumb=#GET{titre_breadcrumb},env} />
@@ -45,7 +44,7 @@
 		<INCLURE{fond=inclure/panier,env} />
 	<!-- END: CART MENU -->]
 
-	<INCLURE{fond=inclure/quick_sidebar} />
+	<INCLURE{fond=inclure/quick_sidebar,env} />
 	<!-- END: LAYOUT/SIDEBARS/QUICK-SIDEBAR -->
 
 		<!-- Modal -->
