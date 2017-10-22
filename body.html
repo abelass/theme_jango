@@ -1,4 +1,4 @@
-#SET{titre_breadcrumb,#ENV{titre_breadcrumb,oui}}#SET{brand_topbar,#ENV{brand_topbar,oui}}#SET{multilingue,#ENV{multilingue,''}[(#PLUGIN{wsp_ml}|oui)#SET{multilingue,oui}]
+#SET{titre_breadcrumb,#ENV{titre_breadcrumb,''}}#SET{brand_topbar,#ENV{brand_topbar,oui}}#SET{multilingue,#ENV{multilingue,''}[(#PLUGIN{wsp_ml}|oui)#SET{multilingue,oui}]
 <body class="[(#GET{brand_topbar}|?{c-layout-header-fixed c-layout-header-6-topbar,c-layout-header-fixed c-layout-header-mobile-fixed c-layout-header-topbar c-layout-header-topbar-collapse})]">
 	<!-- BEGIN: LAYOUT/HEADERS/HEADER-1 -->
 	<!-- BEGIN: HEADER -->

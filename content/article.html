@@ -1,50 +1,25 @@
 <BOUCLE_content(ARTICLES){id_article}>
 <article>
-	[(#ENV{titre_breadcrumb})
+	[(#ENV{titre_breadcrumb}|non)
 	<header class="cartouche">
 		[(#LOGO_ARTICLE|image_reduire{200,200})] [
 		<p class="#EDIT{surtitre} surtitre">(#SURTITRE)</p>
 		]
-		<h1>
+		<h1 class="c-title c-font-bold c-font-uppercase">
 			<span class="#EDIT{titre}">#TITRE</span>[ <small
-				class="#EDIT{soustitre} soustitre">(#SOUSTITRE)</small> ]
+				class="#EDIT{soustitre} soustitre">(#SOUSTITRE)</small>]
 		</h1>
 
-		<p class="publication">
+		<p class="c-panel c-margin-b-30">
+			[(#VAL{donnees_auteurs}|a_cacher|non)[<span class="c-author"> <:par_auteur:>
+					(#LESAUTEURS)</span>]]
 			[(#VAL{donnees_date}|a_cacher|non)
-			<time pubdate="pubdate" datetime="[(#DATE|date_iso)]">
+			<time pubdate="c-date" datetime="[(#DATE|date_iso)]">
 				<i class="icon-calendar"></i> [(#DATE|nom_jour) ][(#DATE|affdate)]
 			</time>
-			] [(#VAL{donnees_auteurs}|a_cacher|non)[<span class="authors"><span
-				class="sep">, </span><i class="icon-user"></i> <:par_auteur:>
-				(#LESAUTEURS)</span>]]
+			]
 		</p>
-		<div class="postmeta">
-			<BOUCLE_nb_commentaires(FORUMS) {id_article}{plat} />
-			[(#TOTAL_BOUCLE|oui) <span class="comments"> <span class="sep">|</span>
-				<a [ href="(#REM|ancre_url{comments})"
-				] [title="(#TOTAL_BOUCLE|singulier_ou_pluriel{zcore:info_1_commentaire,zcore:info_nb_commentaires}|attribut_html)"]>[<i
-					class="icon-comment"></i> (#TOTAL_BOUCLE)]
-			</a>
-			</span> ]
-			<//B_nb_commentaires>
-			<BOUCLE_combien(SIGNATURES) {id_article}{plat} />
-			[(#TOTAL_BOUCLE|oui) <span class="signatures"> <span
-				class="sep">|</span> <a [ href="(#REM|ancre_url{petition})"
-				] [title="(#TOTAL_BOUCLE|singulier_ou_pluriel{zcore:info_1_signature,zcore:info_nb_signatures}|attribut_html)"]>[<i
-					class="icon-ok-circle"></i> (#TOTAL_BOUCLE)]
-			</a>
-			</span> ]
-			<//B_combien>
-			<B_tags> <span class="tags"> <span class="sep">|</span>
-				<ul class="inline">
-					<BOUCLE_tags(MOTS){id_article}>
-					<li><a class="label" href="#URL_MOT"><i class="icon-tag"></i>
-							#TITRE</a></li>
-					</BOUCLE_tags>
-				</ul>
-			</span> </B_tags>
-		</div>
+		<INCLURE{fond=inclure/postmeta,id_article} />
 
 	</header>]
 	[(#REM) Boite à outils]
