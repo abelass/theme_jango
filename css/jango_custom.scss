@@ -50,3 +50,9 @@ ul:not(.spip), ol:not(.spip) {
 		margin-left: 0;
 	}
 }
+
+@media (min-width: 992px) {
+	.c-layout-header.c-layout-header-6 .c-quick-search > .form-control {
+		height: 78px;
+	}
+}
