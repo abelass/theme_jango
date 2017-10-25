@@ -5,35 +5,32 @@
 	on l'affiche si son parent est expose ou est la racine du site.
 
 ]
-			<!-- BEGIN: LAYOUT/SIDEBARS/SIDEBAR-MENU-2 -->
-<div class="c-sidebar-menu-toggler">
-	<h3 class="c-title c-font-uppercase c-font-bold">Navigation</h3>
-	<a href="javascript:;" class="c-content-toggler" data-toggle="collapse" data-target="#sidebar-menu-1">
-		<span class="c-line"></span>
-		<span class="c-line"></span>
-		<span class="c-line"></span>
-	</a>
-</div>
-
-
-
 <BOUCLE_secteur(HIERARCHIE){tout}{id_rubrique}{racine}{0,1}{tout}>
 	<BOUCLE_niveler(RUBRIQUES){id_parent}{par num titre}{tout}>
 	<B_rubriques>
-		<ul class="c-sidebar-menu c-option-2 collapse" id="sidebar-menu-1">
+	<!-- BEGIN: LAYOUT/SIDEBARS/SIDEBAR-MENU-2 -->
+	<div class="c-sidebar-menu-toggler">
+		<h3 class="c-title c-font-uppercase c-font-bold">Navigation</h3>
+		<a href="javascript:;" class="c-content-toggler" data-toggle="collapse" data-target="#sidebar-menu-1">
+			<span class="c-line"></span>
+			<span class="c-line"></span>
+			<span class="c-line"></span>
+		</a>
+	</div>
+	<ul class="c-sidebar-menu c-option-2 collapse" id="sidebar-menu-1">
 		<BOUCLE_rubriques(RUBRIQUES) {id_parent} {par num titre}{!par date}{tout}{lang}{si #EXPOSE}>
-			<li class="c-dropdown[ c-open c-active(#EXPOSE|oui)]">
-				<a href="#URL_RUBRIQUE"[ class="(#EXPOSE)"]>#TITRE</a>
-				<B_sous_rubriques>
-				<ul class="c-dropdown-menu">
-					<BOUCLE_sous_rubriques(RUBRIQUES) {id_parent} {par num titre}{!par date}{tout}><BOUCLE_test_expose(RUBRIQUES) {id_enfant}{tout}>#EXPOSE{' '}</BOUCLE_test_expose>
-					<li class="c-onepage-link"><a href="#URL_RUBRIQUE"[ class="(#EXPOSE)"]>#TITRE</a><BOUCLE_re(BOUCLE_sous_rubriques)></BOUCLE_re>	</li>
-					</B_test_expose></BOUCLE_sous_rubriques>
-				</ul>
-				</B_sous_rubriques>
-			</li>
+		<li class="c-dropdown[ c-open c-active(#EXPOSE|oui)]">
+			<a href="#URL_RUBRIQUE"[ class="(#EXPOSE)"]>#TITRE</a>
+			<B_sous_rubriques>
+			<ul class="c-dropdown-menu">
+				<BOUCLE_sous_rubriques(RUBRIQUES) {id_parent} {par num titre}{!par date}{tout}><BOUCLE_test_expose(RUBRIQUES) {id_enfant}{tout}>#EXPOSE{' '}</BOUCLE_test_expose>
+				<li class="c-onepage-link"><a href="#URL_RUBRIQUE"[ class="(#EXPOSE)"]>#TITRE</a><BOUCLE_re(BOUCLE_sous_rubriques)></BOUCLE_re>	</li>
+				</B_test_expose></BOUCLE_sous_rubriques>
+			</ul>
+			</B_sous_rubriques>
+		</li>
 		</BOUCLE_rubriques>
-		</ul>
+	</ul>
 	</B_rubriques>
 	</BOUCLE_niveler>
 </BOUCLE_secteur>
