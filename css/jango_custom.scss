@@ -1,12 +1,33 @@
+@import 'css/variables';
 @import 'css/jango_variables';
 
 body {
 	line-height: normal;
 }
 
+/* Flex box */
+
+.d-flex {
+	display: flex
+}
+
+.flex-wrap-nowrap {
+	flex-wrap: nowrap;
+}
+
+.flex-wrap-wrap {
+	flex-wrap: wrap;
+}
+
+.flex-wrap-wrap-reverse {
+	flex-wrap: wrap-reverse;
+}
+
+.justify-content-start {
+	justify: flex-start;
+}
+
 /* Dropdown menu */
-
-
 .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
 	background-color: $couleur_principale;
 }
@@ -45,14 +66,21 @@ ul:not(.spip), ol:not(.spip) {
 }
 
 
-@media (min-width: 1200px) {
+@media (min-width: @screen-lg-min) {
 	ul:not(.spip), ol:not(.spip) {
 		margin-left: 0;
 	}
+
+	/* Flex box */
+	.d-lg-flex {
+		display: flex;
+	}
 }
 
-@media (min-width: 992px) {
+
+@media (min-width: @screen-md-min) {
 	.c-layout-header.c-layout-header-6 .c-quick-search > .form-control {
 		height: 78px;
 	}
 }
+
