@@ -14,6 +14,7 @@
 
 	<div class="c-layout-page">
 		<!-- BEGIN: LAYOUT/BREADCRUMBS/BREADCRUMBS-2 -->
+		[(#COMPOSITION|!={home}|oui)
 		<div class="c-layout-breadcrumbs-1 c-subtitle c-fonts-uppercase c-fonts-bold c-bordered c-bordered-both">
 			<div class="container">
 				[(#GET{titre_breadcrumb}|oui)
@@ -21,9 +22,9 @@
 					<h1 class="#EDIT{#ENV{class_crayon,titre}} c-font-uppercase c-font-sbold">#TITRE</h1>
 					[<h2>(#SOUSTITRE)</h2>]
 				</div>]
-				<INCLURE{fond=breadcrumb/#ENV{type-page},env} />
+					<INCLURE{fond=breadcrumb/#ENV{type-page},env} />
 			</div>
-		</div>
+		</div>]
 		<div class="container">
 			[<div class="c-layout-sidebar-menu c-theme ">
 				(#INCLURE{fond=aside/#ENV{type-page},multilingue=#GET{multilingue},env})
