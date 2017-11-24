@@ -1,0 +1,16 @@
+<BOUCLE_nav(RUBRIQUES) {racine} {par num titre, titre}{!par date}{tout}{lang}>
+	<BOUCLE_rubriques(RUBRIQUES){id_parent} {par num titre, titre}{tout}>
+	<li class="c-menu-type-classic[ (#EXPOSE|oui)c-active]">
+			<a href="#URL_RUBRIQUE" class="c-link dropdown-toggle">[(#TITRE|supprimer_numero|couper{80})]</a>
+			<B_sous_rubriques>
+			<ul class="dropdown-menu c-menu-type-classic c-pull-left">
+					<BOUCLE_sous_rubriques(RUBRIQUES) {id_parent} {par num titre, titre}{tout}>
+					<li class="[(#EXPOSE|oui)c-active ]dropdown-submenu">
+						<a href="#URL_RUBRIQUE" <BOUCLE_test_sousrub(RUBRIQUES){id_parent}{0,1}>class="daddy"</BOUCLE_test_sousrub>>[(#TITRE|supprimer_numero|couper{80})]</a><BOUCLE_re(BOUCLE_sous_rubriques)></BOUCLE_re>   </li>
+					</BOUCLE_sous_rubriques>
+			</ul>
+			</B_sous_rubriques>
+	</li>
+	</BOUCLE_rubriques>
+</B_rubriques>
+</BOUCLE_nav>
