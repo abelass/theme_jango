@@ -29,10 +29,11 @@
 			[<div class="c-layout-sidebar-menu c-theme ">
 				(#INCLURE{fond=aside/#ENV{type-page},multilingue=#GET{multilingue},env})
 			</div>]
-			<div class="c-layout-sidebar-content ">
+			[(#COMPOSITION|!={home}|oui)
+			<div class="c-layout-sidebar-content ">]
 				<INCLURE{fond=content/#ENV{type-page},titre_breadcrumb=#GET{titre_breadcrumb},env} />
 			</div>
-		</div>
+				[(#COMPOSITION|!={home}|oui)</div>]
 	</div>
 	<a name="footer"></a>
 	<footer class="c-layout-footer c-layout-footer-3 c-bg-dark">
