@@ -65,6 +65,12 @@ ul:not(.spip), ol:not(.spip) {
 	color: #5c6873;
 }
 
+/* Forms */
+
+.formulaire_spip .boutons {
+	margin: 0;
+}
+
 
 @media (min-width: @screen-lg-min) {
 	ul:not(.spip), ol:not(.spip) {
