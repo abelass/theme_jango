@@ -2,7 +2,7 @@
 	prefix="theme_jango"
 	categorie="squelette"
 	version="1.0.4"
-	etat="dev"
+	etat="test"
 	compatibilite="[3.0.0;3.2.*]"
 	logo="img/spipr_dist-32.png"
 	documentation="http://spipr.nursit.com/"
