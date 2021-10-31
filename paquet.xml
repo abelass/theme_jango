@@ -12,7 +12,7 @@
 	<nom>Theme Jango</nom>
 
 	<auteur>Rainer Müller</auteur>
-	<auteur lien='https://websimple.be'>Web Simple</auteur>
+	<auteur lien='https://web-simple.eu'>Web Simple</auteur>
 
 	<necessite nom="bootstrap3_dist" compatibilite="[1.0.2;[" />
 	<necessite nom="wsps_html5" compatibilite="[2.0.5;]" />
