@@ -1,10 +1,10 @@
 <paquet
 	prefix="theme_jango"
 	categorie="squelette"
-	version="1.0.7"
-	etat="test"
+	version="1.1.0"
+	etat="stable"
 
-	compatibilite="[3.0.0;3.2.*]"
+	compatibilite="[3.0.0;4.0.*]"
 	logo="img/spipr_dist-32.png"
 	documentation="http://spipr.nursit.com/"
 >
@@ -18,5 +18,5 @@
 	<necessite nom="wsps_html5" compatibilite="[2.0.5;]" />
 	<necessite nom="owlcarousel" compatibilite="[1.0.3;]" />
 
-	<utilise nom="wsp_ml" compatibilite="[0.2.6;]" />
+	<utilise nom="wsp_ml" compatibilite="[1.0.3;]" />
 </paquet>
