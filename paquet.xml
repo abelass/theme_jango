@@ -1,10 +1,10 @@
 <paquet
 	prefix="theme_jango"
 	categorie="squelette"
-	version="1.1.0"
+	version="2.0.0"
 	etat="stable"
 
-	compatibilite="[3.0.0;4.0.*]"
+	compatibilite="[4.0.0;4.0.*]"
 	logo="img/spipr_dist-32.png"
 	documentation="http://spipr.nursit.com/"
 >
